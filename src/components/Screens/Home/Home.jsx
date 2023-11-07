@@ -6,8 +6,7 @@ import InputForm from './InputForm/InputForm';
 
 function Home() {
 
-  const storedData = JSON.parse(localStorage.getItem('todo'));
-
+  const storedData = JSON.parse(localStorage.getItem('todo')) || [];
   const [todo, setTodo] = useState(storedData);
 
   useEffect(() => {
