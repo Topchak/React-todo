@@ -1,0 +1,49 @@
+.form__wrapper {
+ display: flex;
+ align-items: center; 
+ justify-content: center;
+ gap: 10px;
+
+}
+
+.input {
+  font-family: "Agbalumo";
+  display: block;
+  width: 40%;
+  padding: 10px 20px;
+
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background-color: #04202C;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #000000;
+  color: #c9d1c8;
+
+}
+.input:focus {
+  box-shadow: 0 10px 20px #000000;
+
+}
+
+.button{
+  font-family: "Agbalumo";
+  padding: 10px 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background-color: #04202C;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #000000;
+  color: #727472;
+
+}
+.button:hover{
+  color: #c9d1c8;
+  transition: .2s ease-in-out;
+
+}
+.button:active{
+  background-color: #031c26;
+  box-shadow: 0 8px 15px #000000;
+}

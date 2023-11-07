@@ -1,0 +1,12 @@
+.title {
+
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  margin: 20px;
+
+}
+.title h1{
+  color: #ffffff; 
+  text-shadow: 2px 4px 5px #bec9bc ;
+}

@@ -1,0 +1,78 @@
+.home {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  font-family: 'Agbalumo';
+  letter-spacing: 1px;
+}
+
+.home p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  
+}
+
+.descr__todos {
+  animation: backgroundAnimation 20s linear infinite;
+}
+.descr__form{
+  animation: backgroundAnimation2 20s linear infinite;
+
+}
+
+
+@keyframes backgroundAnimation {
+  0% {
+    color: #0c4f6b;
+  }
+
+  25% {
+    color: #02202c;
+  }
+
+  40% {
+    color: rgb(67, 10, 58);
+  }
+
+  50% {
+    color: #04202C;
+  }
+
+  60% {
+    color: #ff006f;
+  }
+
+  100% {
+    color: #0a3243;
+  }
+}
+
+@keyframes backgroundAnimation2 {
+  0% {
+    color: #0a3243;
+    color: #0c4f6b;
+  }
+
+  25% {
+    color: #ff006f;
+    
+  }
+
+  40% {
+    color: rgb(67, 10, 58);
+  }
+
+  50% {
+    color: #04202C;
+  }
+
+  60% {
+    color: #02202c;
+  }
+
+  100% {
+    color: #0a3243;
+    
+  }
+}

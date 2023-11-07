@@ -1,0 +1,15 @@
+.main {
+
+  width: 80%;
+  min-height: 50%;
+  margin: 0 auto 30px auto ;
+  padding: 15px 20px;
+  
+  font-size: 20px;
+  background-color: #04202C;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #000000;
+
+
+  transition: .3s ease-in-out;
+}

@@ -1,0 +1,51 @@
+.todo {
+
+  font-family: 'Agbalumo';
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  background-color: #04202C;
+  transition: .3s ease-in-out;
+  border: 1px solid #c9d1c8;
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text__wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+}
+
+.text {
+  font-size: 20px;
+  color: #c9d1c8;
+  font-weight: 500;
+  font-family: 'Agbalumo';
+  transition: .3s ease-in-out;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+.button__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.button__wrapper button {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  transition: .3s ease-in-out;
+  color: #c9d1c8;
+
+}
+
+.button__wrapper button:hover {
+  color: rgb(194, 54, 54);
+  transform: translate(0px, -2px);
+}

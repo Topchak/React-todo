@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Agbalumo";
+  background-color: #04202C;
+  color: #C9D1C8;
+  animation: backgroundAnimation 20s linear infinite;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #04202C;
+  }
+  25% {
+    background-color: #0c4f6b;
+  }
+  50% {
+    background-color: #083c53;
+  }
+  100% {
+    background-color: #04202C;
+  }
+}
+
+/* 
+#304004 green
+#5b7065 tree
+#c9d1c8 fozzy
+*/
+@font-face {
+  font-family: 'Agbalumo';
+  src: url('./fonts/Agbalumo.woff') format('woff');
+}
