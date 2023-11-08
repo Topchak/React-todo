@@ -19,7 +19,7 @@ function Home() {
 
   const addTodo = (value) => {
     if(value){
-      setTodo([ ...todo, { text: value, id: Date.now()}])
+      setTodo([ ...todo, { text: value}])
     }
   }
 
@@ -33,7 +33,7 @@ function Home() {
     <div className={styles.home}>
       <Title/>
       <p className={styles.descr__todos}>You can create and delete your todos here</p>
-      <Main todo={todo}/>
+      <Main todo={todo} clearTodo={() => setTodo([])}/>
       <p className={styles.descr__form}>Enter your todo here:</p>
       <InputForm onFormSubmit={addTodo} />
     </div>

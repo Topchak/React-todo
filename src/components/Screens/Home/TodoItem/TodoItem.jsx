@@ -2,10 +2,9 @@ import { useState,useRef, useEffect} from 'react';
 
 import {BsTrash2 } from 'react-icons/bs'
 import styles from "./TodoItem.module.css";
-function Todo({text}) {
+function Todo({text,id}) {
 
   const [isDone, setIsDone] = useState(false)
-
   const textRef = useRef()
 
 
@@ -22,8 +21,8 @@ function Todo({text}) {
   },[isDone])
 
   return (
-    <div className={styles.todo}>
-      <div className={styles.text__wrapper}>
+    <div className={styles.todo} id={id}>
+      <div className={styles.text__wrapper} >
       <button ref={textRef} onClick={done} className={styles.text}>{text}</button>
       </div>
       <div className={styles.button__wrapper}>

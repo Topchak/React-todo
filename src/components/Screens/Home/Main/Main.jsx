@@ -2,8 +2,9 @@ import {useState, useEffect} from 'react'
 import styles from './Main.module.css'
 import TodoItem from '../TodoItem/TodoItem'
 
-function Main({todo}) {
-  const [empty, setEmpty] = useState(true)
+function Main({todo, clearTodo}) {
+  const [empty, setEmpty] = useState(false)
+
 
   useEffect(() => {
     if (todo.length === 0) {
@@ -12,12 +13,15 @@ function Main({todo}) {
       setEmpty(false)
     }
   }, [todo])
-  const element = todo.map((item) => {
-    return <TodoItem key={item.id} text={item.text}/>
+
+
+  const element = todo.map((item,i) => {
+    return <TodoItem key={i} text={item.text} id={i}/>
   })
 
   return (
     <div className={styles.main}>
+      <span onClick={clearTodo}  className={styles.clear}>Clear all</span>
       {
       empty ? <span>Here will be your todos</span> : element
       }

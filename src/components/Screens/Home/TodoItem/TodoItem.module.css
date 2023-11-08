@@ -46,6 +46,6 @@
 }
 
 .button__wrapper button:hover {
-  color: rgb(194, 54, 54);
+  color: rgb(230, 169, 169);
   transform: translate(0px, -2px);
 }
