@@ -1,8 +1,8 @@
 .form__wrapper {
- display: flex;
- align-items: center; 
- justify-content: center;
- gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
 }
 
@@ -20,13 +20,33 @@
   box-shadow: 0 4px 10px #000000;
   color: #c9d1c8;
 
+  transition: .3s ease-in-out;
+
 }
+
 .input:focus {
   box-shadow: 0 10px 20px #000000;
 
 }
 
-.button{
+.error {
+  box-shadow: 4px 4px 5px rgb(213, 135, 135);
+  animation: errorBlink 2s ease-in-out infinite;
+}
+
+@keyframes errorBlink {
+  0% {
+    box-shadow: 4px 4px 7px rgb(207, 102, 102);
+  }
+  50% {
+    box-shadow: 4px 4px 7px rgb(116, 50, 50);
+  }
+  100% {
+    box-shadow: 4px 4px 7px rgb(215, 114, 114);
+  }
+}
+
+.button {
   font-family: "Agbalumo";
   padding: 10px 20px;
   font-size: 18px;
@@ -38,12 +58,14 @@
   color: #727472;
 
 }
-.button:hover{
+
+.button:hover {
   color: #c9d1c8;
   transition: .2s ease-in-out;
 
 }
-.button:active{
+
+.button:active {
   background-color: #031c26;
   box-shadow: 0 8px 15px #000000;
 }
