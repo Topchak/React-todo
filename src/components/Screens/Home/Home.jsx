@@ -6,8 +6,10 @@ import InputForm from './InputForm/InputForm';
 
 function Home() {
 
+
   const storedData = JSON.parse(localStorage.getItem('todo')) || [];
   const [todo, setTodo] = useState(storedData);
+  console.log(todo);
 
   useEffect(() => {
     const storedTodo = JSON.parse(localStorage.getItem('todo'));
@@ -19,7 +21,7 @@ function Home() {
 
   const addTodo = (value) => {
     if(value){
-      setTodo([ ...todo, { text: value, id: Date.now()}])
+      setTodo([ ...todo, { text: value}])
     }
   }
 
@@ -33,6 +35,8 @@ function Home() {
     <div className={styles.home}>
       <Title/>
       <p className={styles.descr__todos}>You can create and delete your todos here</p>
+
+
       <Main todo={todo}/>
       <p className={styles.descr__form}>Enter your todo here:</p>
       <InputForm onFormSubmit={addTodo} />

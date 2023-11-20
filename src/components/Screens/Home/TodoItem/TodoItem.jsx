@@ -1,12 +1,21 @@
-import { useState,useRef, useEffect} from 'react';
+import { useState,useRef, useEffect , useContext} from 'react';
+import ContextTodoItemProvider from '../../../../Context/ContextTodoItem';
 
 import {BsTrash2 } from 'react-icons/bs'
 import styles from "./TodoItem.module.css";
-function Todo({text}) {
+function Todo({text, id}) {
+
+  // const {deleteTodo} = useContext(ContextTodoItemProvider)
 
   const [isDone, setIsDone] = useState(false)
+  const [isDeleted, setIsDeleted] = useState(false)
 
   const textRef = useRef()
+
+  const deleteTodoItem = (id) =>{
+    setIsDeleted(id)
+    console.log(id);
+  }
 
 
   const done = () =>{
@@ -22,12 +31,12 @@ function Todo({text}) {
   },[isDone])
 
   return (
-    <div className={styles.todo}>
+    <div className={styles.todo} id={id}>
       <div className={styles.text__wrapper}>
       <button ref={textRef} onClick={done} className={styles.text}>{text}</button>
       </div>
       <div className={styles.button__wrapper}>
-        <button className={styles.button}><BsTrash2/></button>
+        <button onClick={(e) => deleteTodoItem(id)} className={styles.button}><BsTrash2/></button>
       </div>
     </div>
   )

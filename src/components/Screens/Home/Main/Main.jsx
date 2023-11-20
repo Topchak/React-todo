@@ -12,8 +12,8 @@ function Main({todo}) {
       setEmpty(false)
     }
   }, [todo])
-  const element = todo.map((item) => {
-    return <TodoItem key={item.id} text={item.text}/>
+  const element = todo.map((item, index) => {
+    return <TodoItem key={index} text={item.text} id={index}/>
   })
 
   return (
